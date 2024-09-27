@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cachorros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Cachorros</h1>
+        <form id="formCachorro">
+            <input type="text" id="nomeCachorro" placeholder="Nome do Cachorro" required>
+            <input type="number" id="pesoCachorro" placeholder="Peso (kg)" required>
+            <input type="text" id="corCachorro" placeholder="Cor" required>
+            <input type="text" id="racaCachorro" placeholder="Raça" required>
+            <button type="submit">Adicionar</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Peso</th>
+                    <th>Cor</th>
+                    <th>Raça</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="listaCachorros"></tbody>
+        </table>
+
+        <div class="botoes-relatorio">
+            <button onclick="gerarRelatorioTxt()">Relatório TXT</button>
+            <button onclick="gerarRelatorioPdf()">Relatório PDF</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
